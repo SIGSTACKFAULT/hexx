@@ -33,7 +33,7 @@ impl Add<Direction> for Hex {
 
     #[inline]
     fn add(self, rhs: Direction) -> Self::Output {
-        self.add(Self::from(rhs))
+        self.add_dir(rhs)
     }
 }
 
@@ -42,7 +42,7 @@ impl Add<DiagonalDirection> for Hex {
 
     #[inline]
     fn add(self, rhs: DiagonalDirection) -> Self::Output {
-        self.add(Self::from(rhs))
+        self.add_diag_dir(rhs)
     }
 }
 
